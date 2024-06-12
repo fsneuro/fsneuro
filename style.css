@@ -1,0 +1,158 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Reset Margin and Padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff; /* White background to match the logo */
+    color: #333;
+    padding: 10px 0; /* Reduced padding for a slimmer header */
+    text-align: center;
+}
+
+/* Logo Styles */
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 120px; /* Reduced logo size */
+}
+
+/* Navigation Styles (if applicable) */
+nav {
+    background: #474747; /* Dark gray for contrast */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Section Styles */
+section {
+    padding: 20px 5%; /* Reduced padding for smaller margins */
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Nested list styles */
+ul ul {
+    padding-left: 20px; /* Indentation for nested lists */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Reduced padding */
+}
+
+.callout {
+    border-left: 4px solid #3273dc; /* A blue accent line on the left */
+    background-color: #f4f4f4; /* A light grey background */
+    padding: 20px; /* Some padding inside the callout box */
+    margin: 20px 0; /* Some margin around the callout box */
+    font-weight: bold; /* Make the text inside bold for emphasis */
+}
+
+.callout2 {
+    border-left: 4px solid #008000; /* A blue accent line on the left */
+    background-color: #f4f4f4; /* A light grey background */
+    padding: 20px; /* Some padding inside the callout box */
+    margin: 20px 0; /* Some margin around the callout box */
+    font-weight: bold; /* Make the text inside bold for emphasis */
+}
+
+.callout3 {
+    border-left: 4px solid #800080; /* A blue accent line on the left */
+    background-color: #f4f4f4; /* A light grey background */
+    padding: 20px; /* Some padding inside the callout box */
+    margin: 20px 0; /* Some margin around the callout box */
+    font-weight: bold; /* Make the text inside bold for emphasis */
+}
+
+.callout p {
+    margin: 0; /* Override default paragraph margins */
+}
+
+.callout a {
+    color: #3273dc; /* Style links to match the callout accent */
+    text-decoration: underline; /* Underline links for visibility */
+}
+
+
+footer a {
+    color: #9ec1f7; /* Light blue for links */
+}
+
+/* Utility Classes */
+.container {
+    width: 100%; /* Full width */
+    max-width: 1100px; /* Slightly reduced max width for a centered look */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Responsive Image */
+img.responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensures the image is centered in its container */
+}
+
+.image-content {
+    width: 50%; /* Takes up half of the container width */
+}
+
+/* Larger Image */
+/* CSS for larger image on mobile and smaller image on PC */
+.large-img-mobile {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+}
+
+.container2 {
+    display: flex;
+    align-items: flex-start; /* Aligns items to the start of the container */
+    justify-content: space-between; /* Ensures space is evenly distributed */
+}
+
+.text-content {
+    width: 50%; /* Takes up half of the container width */
+    padding-right: 20px; /* Optional: Adds some padding to the right for spacing */
+}
+
+/* Responsive Design for smaller devices */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0 2.5%; /* Add padding to avoid text touching the screen edges */
+    }
+
+    header {
+        padding: 10px 0; /* Keep padding consistent */
+    }
+    
+    .large-img-mobile {
+        width: 50%; /* Adjust the width for PC view */
+    }
+}
