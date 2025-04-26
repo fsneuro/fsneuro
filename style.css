@@ -1,158 +1,269 @@
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+/* ====== IMPORTS ====== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
-/* Reset Margin and Padding */
+/* ====== RESET ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* ====== BASE STYLES ====== */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: transparent; /* Change from #f4f4f4 to transparent */
+    position: relative; /* Add this */
 }
 
-/* Header Styles */
+/* ====== TYPOGRAPHY ====== */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 5px;
+}
+
+/* ====== LINKS ====== */
+a {
+    font-weight: 610;
+    color: #1a4885;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:visited {
+    color: #1a4885;
+}
+
+a:hover {
+    font-size: 100.5%;
+    text-decoration: underline;
+}
+
+/* ====== HEADER ====== */
 header {
-    background-color: #ffffff; /* White background to match the logo */
+    background-color: #ffffff;
     color: #333;
-    padding: 10px 0; /* Reduced padding for a slimmer header */
+    padding: 10px 0;
     text-align: center;
 }
 
-/* Logo Styles */
-.logo {
-    display: block;
-    margin: 0 auto;
-    width: 120px; /* Reduced logo size */
+header h1 {
+    color: white;
+    margin-bottom: 5px;
 }
 
-/* Navigation Styles (if applicable) */
-nav {
-    background: #474747; /* Dark gray for contrast */
+header a, header a:visited {
+    color: white;
+}
+
+.hero-header {
+    background-image: url('newbie_retreat.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 250px 0;
+    position: relative;
+    background-repeat: repeat-y; /* Allow it to repeat vertically */
+    z-index: 1; /* Ensure it's above the continuous background */
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    display: block;
+    margin: auto auto 40px;
+    width: 300px;
+    height: auto;
+}
+
+/* ====== SECTIONS ====== */
+section {
+    padding: 20px 5%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 18px; /* Consistent gap between sections */
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+    position: relative; /* Add this */
+    z-index: 1; /* Ensure consistent z-index for all sections */
+}
+
+/* List styling - proper indentation */
+ul, ol {
+    padding-left: 1.1em;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+    margin-bottom: 0; /* No extra margin for nested lists */
+    padding-left: 1.5em; /* Slightly smaller indent for nested lists */
+}
+
+li {
+    margin-bottom: 0.5em; /* Space between list items */
+}
+
+/* For lists inside callouts, adjust indentation */
+.callout ul, .callout ol,
+.callout2 ul, .callout2 ol,
+.callout3 ul, .callout3 ol {
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+}
+
+/* ====== CALLOUTS ====== */
+.callout,
+.callout2,
+.callout3 {
+    border-left: 4px solid;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.callout {
+    border-left-color: #3273dc;
+}
+
+.callout2 {
+    border-left-color: #008000;
+}
+
+.callout3 {
+    border-left-color: #800080;
+}
+
+.callout p,
+.callout2 p,
+.callout3 p {
+    margin: 0;
+}
+
+.callout a,
+.callout2 a,
+.callout3 a {
+    color: #1a4885;
+}
+
+.callout a:hover,
+.callout2 a:hover,
+.callout3 a:hover {
+    text-decoration: underline;
+}
+
+.callout + br,
+.callout2 + br,
+.callout3 + br {
+    display: none;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
+footer a,
+footer a:visited {
+    color: #9ec1f7;
     text-decoration: none;
-    font-weight: 700;
 }
 
-/* Section Styles */
-section {
-    padding: 20px 5%; /* Reduced padding for smaller margins */
-    background: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Nested list styles */
-ul ul {
-    padding-left: 20px; /* Indentation for nested lists */
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0; /* Reduced padding */
-}
-
-.callout {
-    border-left: 4px solid #3273dc; /* A blue accent line on the left */
-    background-color: #f4f4f4; /* A light grey background */
-    padding: 20px; /* Some padding inside the callout box */
-    margin: 20px 0; /* Some margin around the callout box */
-    font-weight: bold; /* Make the text inside bold for emphasis */
-}
-
-.callout2 {
-    border-left: 4px solid #008000; /* A blue accent line on the left */
-    background-color: #f4f4f4; /* A light grey background */
-    padding: 20px; /* Some padding inside the callout box */
-    margin: 20px 0; /* Some margin around the callout box */
-    font-weight: bold; /* Make the text inside bold for emphasis */
-}
-
-.callout3 {
-    border-left: 4px solid #800080; /* A blue accent line on the left */
-    background-color: #f4f4f4; /* A light grey background */
-    padding: 20px; /* Some padding inside the callout box */
-    margin: 20px 0; /* Some margin around the callout box */
-    font-weight: bold; /* Make the text inside bold for emphasis */
-}
-
-.callout p {
-    margin: 0; /* Override default paragraph margins */
-}
-
-.callout a {
-    color: #3273dc; /* Style links to match the callout accent */
-    text-decoration: underline; /* Underline links for visibility */
+footer a:hover {
+    text-decoration: underline;
 }
 
 
-footer a {
-    color: #9ec1f7; /* Light blue for links */
-}
-
-/* Utility Classes */
-.container {
-    width: 100%; /* Full width */
-    max-width: 1100px; /* Slightly reduced max width for a centered look */
-    margin: auto;
-    overflow: hidden;
-}
-
-/* Responsive Image */
+/* Responsive images */
 img.responsive-img {
     max-width: 100%;
     height: auto;
-    display: block; /* Ensures the image is centered in its container */
+    display: block;
 }
 
-.image-content {
-    width: 50%; /* Takes up half of the container width */
-}
-
-/* Larger Image */
-/* CSS for larger image on mobile and smaller image on PC */
 .large-img-mobile {
-    width: 100%; /* Full width on mobile */
+    width: 100%;
     height: auto;
 }
 
-.container2 {
-    display: flex;
-    align-items: flex-start; /* Aligns items to the start of the container */
-    justify-content: space-between; /* Ensures space is evenly distributed */
+/* ====== PARALLAX STYLES ====== */
+.parallax-bg {
+    position: relative;
+    overflow: hidden;
 }
 
-.text-content {
-    width: 50%; /* Takes up half of the container width */
-    padding-right: 20px; /* Optional: Adds some padding to the right for spacing */
+.parallax-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
-/* Responsive Design for smaller devices */
+/* Continuous parallax background with stacked images */
+.continuous-parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300vh; /* Taller than viewport to hold stacked images */
+    z-index: -10;
+    pointer-events: none;
+    will-change: transform;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    will-change: transform;
+    filter: blur(5px); /* Optional blur effect */
+}
+
+/* ====== MEDIA QUERIES ====== */
 @media (max-width: 768px) {
+    .scroll-animation {
+        transform: translateY(30px);
+    }
+    
     .container {
         width: 95%;
-        padding: 0 2.5%; /* Add padding to avoid text touching the screen edges */
-    }
-
-    header {
-        padding: 10px 0; /* Keep padding consistent */
+        padding: 0 2.5%;
     }
     
     .large-img-mobile {
-        width: 50%; /* Adjust the width for PC view */
+        width: 50%;
     }
 }
