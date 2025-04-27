@@ -63,7 +63,7 @@ header a, header a:visited {
 .hero-header {
     background-image: url('newbie_retreat.png');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-attachment: fixed;
     color: white;
     text-align: center;
@@ -275,14 +275,26 @@ img.responsive-img {
     
     /* Header & hero adjustments */
     .hero-header {
-        padding: 150px 0 100px;  /* More padding on top, less on bottom */
-        min-height: 40vh;  /* Ensure minimum height */
+        padding: 150px 0 50px;  /* Reduced top padding for smaller screens */
+        max-height: 500px;  /* Remove max height constraint */
+        min-height: 30vh;  /* Ensure minimum height */
+        background-size: 200%;  /* Wider than 100% to show more width */
+        background-position: top center;  /* Center the image horizontally and vertically */
     }
     
+
     .header-overlay {
-        padding: 20px 10px;  /* Add padding inside overlay */
-        align-items: flex-end;  /* Align content toward bottom */
+        display: flex;
+        flex-direction: column;
         justify-content: center;
+        background-color: rgba(0, 0, 0, 0.4);  /* Slightly lighter overlay */
+        padding: 30px 15px;
+        height: 100%;
+    }
+    
+    .container {
+        position: relative;
+        z-index: 2;
     }
     
     header h1 {
@@ -372,8 +384,12 @@ img.responsive-img {
     }
     
     .hero-header {
+        min-height: 550px;  /* Slightly taller on smallest screens */
+        background-position: center 15%;  /* Show even more of the upper image */
         padding: 200px 0 80px;  /* Even more top padding for smallest screens */
         min-height: 80vh;  /* Larger minimum height */
+        background-size: 150% auto;  /* Even wider on smallest devices */
+        animation: panBackground 30s ease-in-out infinite alternate;  /* Slower panning */
     }
     
     header h1 {
