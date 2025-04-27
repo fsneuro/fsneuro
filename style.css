@@ -277,9 +277,10 @@ img.responsive-img {
     .hero-header {
         padding: 150px 0 50px;  /* Reduced top padding for smaller screens */
         max-height: 500px;  /* Remove max height constraint */
-        min-height: 30vh;  /* Ensure minimum height */
-        background-size: 300%;  /* Wider than 100% to show more width */
+        min-height: 50vh;  /* Ensure minimum height */
+        background-size: auto;  /* Reset to normal size */
         background-position: top center;  /* Center the image horizontally and vertically */
+        background-repeat: repeat-x;  /* Add horizontal repetition */
     }
     
 
@@ -371,6 +372,17 @@ img.responsive-img {
     footer {
         padding: 20px 15px;
     }
+    
+    /* Change the continuous parallax background for mobile */
+    .continuous-parallax-bg {
+        height: 400vh;  /* Increase height for better coverage */
+        top: -50px;  /* Start above the viewport to ensure top coverage */
+    }
+    
+    .parallax-layer {
+        background-repeat: repeat-x repeat-y !important;  /* Add vertical repetition */
+        height: 120vh;  /* Make layers taller */
+    }
 }
 
 /* Extra small devices */
@@ -385,10 +397,11 @@ img.responsive-img {
     
     .hero-header {
         padding: 150px 0 50px;  /* Reduced top padding for smaller screens */
-        max-height: 100px;  /* Remove max height constraint */
-        min-height: 20vh;  /* Ensure minimum height */
-        background-size: 250%;  /* Wider than 100% to show more width */
+        max-height: 300px;  /* Remove max height constraint */
+        min-height: 40vh;  /* Ensure minimum height */
+        background-size: auto;  /* Wider than 100% to show more width */
         background-position: top center;  /* Center the image horizontally and vertically */
+        background-repeat: repeat-x !important;  /* Force horizontal repetition */
     }
     
     header h1 {
@@ -411,4 +424,5 @@ img.responsive-img {
     li {
         margin-bottom: 8px;
     }
+
 }

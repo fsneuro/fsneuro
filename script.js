@@ -33,15 +33,45 @@ document.addEventListener('DOMContentLoaded', function() {
         const parallaxContainer = document.createElement('div');
         parallaxContainer.className = 'continuous-parallax-bg';
         
-        // Create 3 stacked image layers
-        const imageCount = 5;
+        // Check if mobile
+        const isMobile = window.innerWidth <= 768;
+        
+        // Calculate document height
+        const documentHeight = Math.max(
+            document.body.scrollHeight,
+            document.body.offsetHeight,
+            document.documentElement.clientHeight,
+            document.documentElement.scrollHeight,
+            document.documentElement.offsetHeight
+        );
+        
+        // Use document height instead of fixed value
+        parallaxContainer.style.height = `${documentHeight + 100}px`;
+        
+        // Create image layers with different settings for mobile
+        const imageCount = isMobile ? 10 : 5;  // More layers for mobile
         for (let i = 0; i < imageCount; i++) {
             const imgLayer = document.createElement('div');
             imgLayer.className = 'parallax-layer';
             imgLayer.style.backgroundImage = "url('newbie_retreat.png')";
-            imgLayer.style.top = `${i * 100}vh`; // Stack images vertically
-            imgLayer.style.opacity = 0.8; // Reduce opacity with blur
-            imgLayer.dataset.speed = (0.3 + (i * 0.1)).toString(); // Different speeds for each layer
+            
+            if (isMobile) {
+                // Mobile version - match hero header zoom level
+                imgLayer.style.top = `${i * 50}vh`;
+                imgLayer.style.backgroundRepeat = 'repeat-x repeat-y';
+                imgLayer.style.backgroundSize = 'auto';  // CHANGED: Using cover like hero header
+                imgLayer.style.backgroundPosition = 'top center';  // CHANGED: Match hero header positioning
+                imgLayer.dataset.speed = (0.2).toString();
+                imgLayer.dataset.horizontalSpeed = (0.05 * i).toString();
+            } else {
+                // Desktop version - match hero header zoom level
+                imgLayer.style.top = `${i * 100}vh`;
+                imgLayer.style.backgroundSize = 'cover';  // CHANGED: Using cover like hero header
+                imgLayer.style.backgroundPosition = 'top center';  // CHANGED: Match hero header positioning
+                imgLayer.style.opacity = 0.8;
+                imgLayer.dataset.speed = (0.3 + (i * 0.1)).toString();
+            }
+            
             parallaxContainer.appendChild(imgLayer);
         }
         
