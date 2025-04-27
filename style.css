@@ -275,7 +275,7 @@ img.responsive-img {
     
     /* Header & hero adjustments */
     .hero-header {
-        padding: 180px 0 100px;  /* More padding on top, less on bottom */
+        padding: 150px 0 100px;  /* More padding on top, less on bottom */
         min-height: 40vh;  /* Ensure minimum height */
     }
     
