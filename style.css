@@ -278,7 +278,7 @@ img.responsive-img {
         padding: 150px 0 50px;  /* Reduced top padding for smaller screens */
         max-height: 500px;  /* Remove max height constraint */
         min-height: 30vh;  /* Ensure minimum height */
-        background-size: 200%;  /* Wider than 100% to show more width */
+        background-size: 300%;  /* Wider than 100% to show more width */
         background-position: top center;  /* Center the image horizontally and vertically */
     }
     
@@ -384,12 +384,11 @@ img.responsive-img {
     }
     
     .hero-header {
-        min-height: 550px;  /* Slightly taller on smallest screens */
-        background-position: center 15%;  /* Show even more of the upper image */
-        padding: 200px 0 80px;  /* Even more top padding for smallest screens */
-        min-height: 80vh;  /* Larger minimum height */
-        background-size: 150% auto;  /* Even wider on smallest devices */
-        animation: panBackground 30s ease-in-out infinite alternate;  /* Slower panning */
+        padding: 150px 0 50px;  /* Reduced top padding for smaller screens */
+        max-height: 100px;  /* Remove max height constraint */
+        min-height: 20vh;  /* Ensure minimum height */
+        background-size: 250%;  /* Wider than 100% to show more width */
+        background-position: top center;  /* Center the image horizontally and vertically */
     }
     
     header h1 {
