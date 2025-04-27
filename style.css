@@ -275,7 +275,20 @@ img.responsive-img {
     
     /* Header & hero adjustments */
     .hero-header {
-        padding: 150px 0;  /* Reduce padding on mobile */
+        padding: 180px 0 100px;  /* More padding on top, less on bottom */
+        min-height: 70vh;  /* Ensure minimum height */
+    }
+    
+    .header-overlay {
+        padding: 20px 10px;  /* Add padding inside overlay */
+        align-items: flex-end;  /* Align content toward bottom */
+        justify-content: center;
+    }
+    
+    header h1 {
+        font-size: 28px;
+        margin: 10px 0;
+        padding: 0 10px;
     }
     
     .logo {
@@ -359,7 +372,14 @@ img.responsive-img {
     }
     
     .hero-header {
-        padding: 100px 0;
+        padding: 200px 0 80px;  /* Even more top padding for smallest screens */
+        min-height: 80vh;  /* Larger minimum height */
+    }
+    
+    header h1 {
+        font-size: 24px;
+        line-height: 1.3;
+        margin: 15px 0;
     }
     
     .logo {
