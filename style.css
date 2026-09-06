@@ -451,7 +451,9 @@ img.responsive-img {
   text-decoration: none;
   font-size: 1.1rem;
 }
-.nav-brand:visited {
+.nav-brand:visited,
+.nav-brand:active
+{
   color: #e1e4e8; /* Changes color for pages the user has already visited */
 }
 
