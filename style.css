@@ -426,3 +426,46 @@ img.responsive-img {
     }
 
 }
+
+.site-nav {
+  background-color: #24292e;
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-brand {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: #e1e4e8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #58a6ff;
+  text-decoration: underline;
+}
